@@ -23,9 +23,8 @@ RSpec.describe Master do
         expect(player.name).to eq 'dwarf_name'
     end
 
-    # it 'throws an error for unknown player type' do
-    #     master = Master.new('master')
-    #     type = "unknown_type"
-    #     expect { master.create_player(type, 'name') }.to raise_error("Unknown #{type} player type")
-    # end
+    it 'raises an exception for unknown player type' do
+        type = "unknown_type"
+        expect { Master.new('master').create_player(type, 'name') }.to raise_exception("Unknown #{type} player type")
+    end
 end

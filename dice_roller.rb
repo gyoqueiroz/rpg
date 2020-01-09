@@ -8,13 +8,13 @@ class DiceRoller
     D12 = Dice.new("D12", 12)
     D20 = Dice.new("D20", 20)
 
-    def roll(amount = 0, sides = 0)
+    def roll(times = 0, sides = 0)
         # rand(1..0) will return nil btw
-        amount.to_i.times.sum { |t| rand(1..sides.to_i) }
+        times.to_i.times.sum { |t| rand(1..sides.to_i) }
     end
 
-    def roll_dice(dice, amount = 0)
-        roll(amount, dice.sides)
+    def roll_dice(dice, times = 0)
+        roll(times, dice.sides)
     end
 
     # loop do

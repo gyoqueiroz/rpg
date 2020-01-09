@@ -4,11 +4,11 @@ class CmdAddPlayer
     end
 
     def perform(type, name)
-        player = @game.master.create_player(type, name)
-        if player != nil
+        begin
+            player = @game.master.create_player(type, name)
             @game.add_player(player)
-            return true
+        rescue Exception => msg
+            puts "Not adding player. #{msg}"
         end
-        return false
     end
 end

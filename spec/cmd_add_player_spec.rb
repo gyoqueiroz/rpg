@@ -17,18 +17,8 @@ RSpec.describe CmdAddPlayer do
         check_one_player_is_created_for_the_given_type("dwarf", Dwarf, "Dwarf name")
     end
 
-    it 'should return true when adding a valid player type' do
-        game = Game.new
-        cmd = CmdAddPlayer.new(game)
-        
-        expect(cmd.perform("knight", "name")).to eq true
-    end
-
     it 'should return false when adding an invalid player type' do
-        game = Game.new
-        cmd = CmdAddPlayer.new(game)
-        
-        expect(cmd.perform("invalid", "name")).to eq false
+        expect { CmdAddPlayer.new(Game.new).perform("invalid", "name") }.to raise_exception
     end
 
     private

@@ -17,7 +17,7 @@ class Master < Player
         elsif type == 'dwarf'
             return Dwarf.new(name)
         else
-            puts "Unknown #{type} player type"
+            raise Exception.new "Unknown #{type} player type"
         end
     end
 
