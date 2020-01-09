@@ -15,8 +15,8 @@ Do not expect very advanced Ruby skills while looking at the code but we will ge
 - There's still a lot to be done
 
 ## How to contribute?
-Feel free to jump in, code something and submit a PR. There's a Trello board that I will migrate to github's equivalent.
-The idea is to use this as a single point for learning Ruby and share knowledge as well.
+Feel free to jump in, code something and submit a PR.
+The idea is to use this project as a single point for lean & share Ruby skills.
 
 
 ## How to play
